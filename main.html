@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Organic Farming</title>
+        <link rel="icon" href="assets/favicon.png">
+        <link rel="stylesheet" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito&family=Alkatra&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!-- SWIPER.JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <!-- Remix Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <!-------------------- PRELOADER -------------------->
+        <div class="preloader">
+            <span class="loader"></span>
+        </div>
+        
+        <!-------------------- SCROLL TO TOP BUTTON -------------------->
+        <div id="scrollTop" onclick="scrollToTop()">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+
+        <!-------------------- Header -------------------->
+        <div class="home" id="home">
+            <nav>
+                <div class="nav-logo">
+                    <i class="ri-suitcase-line"></i>
+                    <h2 id="company" onclick="scrollToTop()">OrganicFarm</h2>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#home" class="pages">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="pages">Government Schemes</a>
+                        </li>
+                        <li>
+                            <a href="#featured" class="pages">Featured Products</a>
+                        </li>
+                        <li>
+                            <a href = "http://127.0.0.1:5501/farm3/weather.html" class = "pages" >Weather</a>
+                        </li>
+                        <li>
+                            <a href="#tour" class="pages">Tour</a>
+                        </li>
+                    </ul>
+                    <div class="nav-close" id="nav-close" onclick="hideNav()">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <!-- TOGGLE DARK/LIGHT MODE Later -->
+                <i class="ri-moon-line" id="moon" onclick="changeToDark()"></i>
+                <i class="ri-sun-line" id="sun" onclick="changeToLight()"></i>
+
+                <div class="nav-toggle" id="nav-toggle" onclick="showNav()">
+                    <i class="ri-apps-line" id="toggle"></i>
+                </div>
+            </nav>
+            <!-- LANDING PAGE -->
+            <div class="header" id="header">
+                <div class="content" data-inViewport="slideTop">
+                    <h2 id="title"><span>Organic</span> Farming</h2>
+                    <p>
+                        We provide high-quality organic food products, ranging <br>from vegetables to fruits. We <b>only</b> grow and sell <br><b>non-GMO</b> products. Check out more below!
+                    </p>
+                    <button onclick="scrollToAbout()">Learn more!<i class="ri-arrow-right-line"></i></button>
+                </div>
+                <img src="assets/basket.png" data-inViewport="slideLeft">
+            </div>
+        </div>
+        <!--------------------  ABOUT -------------------->
+        <div class="about" id="about">
+            <h2>Government Schemes</h2>
+           <p style="font-size: 22px;margin-bottom: 22px; margin-left: 4em;">Following are government schemes click on title to get more information:</p>
+           <div class="links">
+            <div class="l1" style="color: white; margin-bottom: 6px;">
+                <a href="https://www.nabard.org/content1.aspx?id=702&catid=23&mid=530">1)New Agricultural Marketing Infrastructure (AMI) sub scheme of ISAM.</a>
+            </div>
+            <div class="l2" style=" margin-bottom: 6px;">
+                <a href="https://www.nabard.org/content1.aspx?id=595&catid=23&mid=530">2)Agri Clinics and Agri Business Centres Scheme (ACABC)</a>
+            </div>
+           <div class="l3" style="  margin-bottom: 6px;">
+            <a href="https://www.nabard.org/content1.aspx?id=599&catid=23&mid=530">3)National Livestock Mission - Entrepreneurship Development & Employment Generation</a>
+           </div>
+           <div class="l4" style=" margin-bottom: 6px;">
+            <a href="https://www.nabard.org/content1.aspx?id=591&catid=23&mid=530">4)Dairy Entrepreneurship Development Scheme (DEDS)</a>
+           </div>
+           <div class="l5"style=" margin-bottom: 6px;">
+            <a href="https://www.nabard.org/content1.aspx?id=592&catid=23&mid=530">5)Commercial production units of organic inputs -(NPOF)</a>
+           </div>
+           <div class="l6" style="  margin-bottom :6px;">
+            <a href="https://www.nabard.org/content1.aspx?id=600&catid=23&mid=530">6)GSS – Ensuring End Use of Subsidy Released</a>
+           </div>
+           <div class="l7"style=" margin-bottom :6px;">
+            <a href="https://www.nabard.org/content1.aspx?id=602&catid=23&mid=530">7)Interest Subvention Scheme</a>
+           </div>
+           <div class="l8"style="  margin-bottom :6px;">
+            <a href="https://www.nabard.org/content1.aspx?id=1730&catid=23&mid=23">8)Formulation of Special Long Term Refinance Schemes</a>
+           </div>
+        </div>
+          </div>
+        <!-------------------- Featured Products ------------------>
+        <div class="featured" id="featured">
+            <h2>Featured Products</h2>
+            <p>Here are some featured organic products we provide. Check them out!</p>
+            <!-- Swiper -->
+            <div class="swiper" data-inViewport="slideTop">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line"></i>
+                        <h2>Organic Carrot<br><sub>$3 per 500g</sub></h2>
+                        <img src="assets/carrots.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line"></i>
+                        <h2>Juicy Oranges<br><sub>$3 per 1kg</sub></h2>
+                        <img src="assets/oranges.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line"></i>
+                        <h2>Summer Watermelon<br><sub>$4 per 1kg</sub></h2>
+                        <img src="assets/watermelon.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line"></i>
+                        <h2>Fresh Tomatoes<br><sub>$5 per 500g</sub></h2>
+                        <img src="assets/tomato.png">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+                            
+        <!-------------------- Tour ------------------>
+        <div class="tour" id="tour">
+            <h2>Tour</h2>
+            <p>Sign up for our farm tour and get free organic <br>seeds for you to plant!</p>
+            <div class="signup">
+                <img src="assets/subscribe.svg">
+                <form>
+                    <input type="email" placeholder="Enter Email" required="required" id="email" autocomplete="off">
+                    <button type="submit" class="signUpBtn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+      
+        <!-------------------- FOOTER ------------------->
+        <div class="footer">
+            <div class="links">
+                <ul>
+                    <h2>Overview</h2>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                </ul>
+                <ul>
+                    <h2>Others</h2>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+            <p>© Copyright 2023. Codingstar Tutorials. <br>
+                <a href="https://www.flaticon.com/free-icons/farm" title="farm icons">Farm icons created by smashingstocks - Flaticon</a>
+                <br>
+                <a href="https://www.freepik.com/free-vector/vegetables-colored-icons-flat-set_9386563.htm#query=vegetables&position=14&from_view=search&track=sph">Image by macrovector</a> on Freepik
+            </p>
+        </div>
+               
+        <!-------------------- SCRIPT JS ------------------->
+        <script src="js.js"></script>
+    </body>
+</html>
